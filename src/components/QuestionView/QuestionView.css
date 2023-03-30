@@ -1,0 +1,19 @@
+.blue-view-container {
+  border-color: rgb(0, 106, 148) !important;
+}
+
+.blue-view-container .bg-primary {
+  background-color: rgb(0, 106, 148) !important;
+}
+.pgr {
+  font-size: 12px;
+}
+.pdl {
+  padding-left: 24px;
+}
+.wysiwyg {
+  height: 100px;
+}
+.clickable {
+  cursor: pointer;
+}

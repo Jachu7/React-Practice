@@ -1,0 +1,11 @@
+.BlackBtn {
+  background-color: rgb(58, 50, 48) !important;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 10px !important;
+  border: none !important;
+}
+.ArrowIcon {
+  margin-left: 5px;
+  font-size: 18px;
+}
