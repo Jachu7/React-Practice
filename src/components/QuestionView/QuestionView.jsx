@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BsArrowsMove,
   BsFillDashCircleFill,
@@ -7,8 +7,15 @@ import {
 import InitTextEditor from "../InitTextEditor/InitTextEditor";
 import "./QuestionView.css";
 import AddCategory from "../AddCategory/AddCategory";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 function QuestionView() {
+  const [showEditor, setShowEditor] = useState(false);
+  function handleEditorClick() {
+    setShowEditor(true);
+  }
+
   return (
     <div className="container mt-4 mb-4">
       <div className="row">
@@ -26,9 +33,15 @@ function QuestionView() {
             </div>
             <div className="pdl">
               <p className="mt-4 mb-1 pgr">Question group intro</p>
-              <InitTextEditor />
+              <InitTextEditor onEditorClick={handleEditorClick} />
             </div>
-            <div className="wysiwyg"></div>
+            {showEditor && (
+              <Editor
+                wrapperClassName="wysiwyg"
+                editorClassName="editor"
+                toolbarClassName="toolbar"
+              />
+            )}
             <div className="pdl pb-4">
               <AddCategory />
             </div>

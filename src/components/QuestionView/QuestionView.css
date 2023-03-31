@@ -12,7 +12,8 @@
   padding-left: 24px;
 }
 .wysiwyg {
-  height: 100px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
 }
 .clickable {
   cursor: pointer;
